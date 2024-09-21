@@ -14,6 +14,16 @@
 <body>
     <section class="container"></section>
     <section class="page">
+        <div class="admin-flotante">
+            <ul>
+                <li>
+                    <a href="crear_produto.html">
+                        <img src="img/plus.png">
+                        <span>Agregar Producto</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <header class="header">
             <div class="header-top">
                 <div class="header-top-left">
@@ -22,10 +32,13 @@
                 </div>
                 
                 <div class="header-top-right">
-                    <div class="header-info-avatar">
-                        <span class="header-info-avatar-usuario">MasterDjmov</span>
-                        <img class="header-avatar" src="/img/avatar-male.jpg">
-                    </div>
+                    <a href="perfil.html">
+                        <div class="header-info-avatar">
+                            
+                            <span class="header-info-avatar-usuario">MasterDjmov</span>
+                            <img class="header-avatar" src="/img/avatar-male.jpg">
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="header-bottom">
@@ -101,63 +114,123 @@
                         <!-- Producto 1 -->
                         <li class="carrito-item">
                             <div class="carrito-imagen">
-                                <img src="img/productos/archangel_sword.png" alt="Archangel Sword">
+                                <img src="img/productos/shield_composite_shield_i00.png" alt="Archangel Sword">
                             </div>
                             <div class="carrito-info">
-                                <h4 class="producto-nombre">Archangel Sword</h4>
-                                <span class="producto-precio">$2.20 Pesos/Dolar</span>
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
+                                </div>
                                 <div class="control-cantidad">
-                                    <button class="btn-restar">-</button>
-                                    <input type="text" class="cantidad-comprada" value="1" min="1" />
-                                    <button class="btn-sumar">+</button>
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
                                 </div>
                             </div>
-                            <div class="carrito-eliminar">
-                                <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
-                            </div>
+                            
                         </li>
                         <!-- Producto 2 -->
                         <li class="carrito-item">
                             <div class="carrito-imagen">
-                                <img src="img/productos/dominionCrossbow.png" alt="Dragon Claw">
+                                <img src="img/productos/weapon_dual_sword_i00.png" alt="Dragon Claw">
                             </div>
                             <div class="carrito-info">
-                                <h4 class="producto-nombre">Dragon Claw</h4>
-                                <span class="producto-precio">$3.50 Pesos/Dolar</span>
-                                <div class="control-cantidad">
-                                    <button class="btn-restar">-</button>
-                                    <input type="text" class="cantidad-comprada" value="1" min="1" />
-                                    <button class="btn-sumar">+</button>
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
                                 </div>
-                            </div>
-                            <div class="carrito-eliminar">
-                                <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                <div class="control-cantidad">
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                </div>
                             </div>
                         </li>
                         <!-- Producto 3 -->
                         <li class="carrito-item">
                             <div class="carrito-imagen">
-                                <img src="img/productos/eternal_core_sword.png" alt="Phoenix Bow">
+                                <img src="img/productos/weapon_sword_of_valhalla_i01.png" alt="Phoenix Bow">
                             </div>
                             <div class="carrito-info">
-                                <h4 class="producto-nombre">Phoenix Bow</h4>
-                                <span class="producto-precio">$4.75 Pesos/Dolar</span>
-                                <div class="control-cantidad">
-                                    <button class="btn-restar">-</button>
-                                    <input type="text" class="cantidad-comprada" value="1" min="1" />
-                                    <button class="btn-sumar">+</button>
+                                <div class="grupo-info">
+                                    <h4 class="producto-nombre">Archangel Sword</h4>
+                                    <span class="producto-precio">$2.20 Pesos/Dolar</span>
                                 </div>
-                            </div>
-                            <div class="carrito-eliminar">
-                                <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                <div class="control-cantidad">
+                                    <label>Cantidad: </label>
+                                    <div class="grupo-botones">
+                                        <button class="btn-restar">-</button>
+                                        <input type="text" class="cantidad-comprada" value="1" min="1" />
+                                        <button class="btn-sumar">+</button>
+                                    </div>
+                                </div>
+                                <div class="carrito-eliminar">
+                                    <button class="btn-eliminar"><i class="fas fa-trash"></i></button>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </article>
                 <!-- Resumen del Carrito -->
                 <div class="resumen-carrito">
-                    <h3>Total a Pagar: <span class="total-precio">$10.45</span></h3>
-                    <button class="btn-comprar">Proceder con la Compra</button>
+                    <h3>Total a Pagar: <span class="total-precio" data-total="10.45">$10.45</span></h3>
+                    <button class="btn-comprar" id="btn-proceder-compra">Proceder con la Compra</button>
+                </div>
+                <!-- Modal -->
+                <div id="modal-compra" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Selecciona el Método de Pago</h2>
+
+                        <form id="form-compra">
+                            <div class="metodos-pago">
+                                <label for="metodo-pago">Método de Pago:</label>
+                                <select id="metodo-pago" name="metodo-pago" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="visa">Visa</option>
+                                    <option value="payu">PayU</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="maestro">Maestro</option>
+                                    <option value="mastercard">Mastercard</option>
+                                    <option value="mercadopago">MercadoPago</option>
+                                    <option value="naranjaX">NaranjaX</option>
+                                    <option value="rapipago">RapiPago</option>
+                                    <option value="pagofacil">Pago Fácil</option>
+                                    <option value="transferencia">Transferencia Bancaria</option>
+                                </select>
+                            </div>
+
+                            <div class="datos-tarjeta">
+                                <label for="titular">Titular de la tarjeta:</label>
+                                <input type="text" id="titular" name="titular" required>
+
+                                <label for="numero">Número de la tarjeta:</label>
+                                <input type="text" id="numero" name="numero" required>
+
+                                <label for="codigo">Código de seguridad:</label>
+                                <input type="text" id="codigo" name="codigo" required>
+
+                                <label for="vencimiento">Fecha de vencimiento:</label>
+                                <input type="month" id="vencimiento" name="vencimiento" required>
+
+                                <button type="submit" class="btn-comprar">Confirmar Compra</button>
+                            </div>
+                        </form>
+
+                        <h3>Total a Pagar: <span class="total-precio-modal">$10.45</span></h3>
+                    </div>
                 </div>
             </section>
         </main>

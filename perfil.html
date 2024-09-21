@@ -90,57 +90,62 @@
             </div>
             
         </header>
-        
-        <main class="main">
-            <div class="separador"></div>
-            <section id="auth" class="auth">
-                <div class="form-container">
-                    <!-- Formulario de Login -->
-                    <div class="login-form">
-                        <h2>Iniciar Sesión</h2>
-                        <form id="form-login" action="login.html" method="post">
-                            <div class="form-group">
-                                <label for="login-nombre-personaje">Nombre del Personaje</label>
-                                <input type="text" id="login-nombre-personaje" name="nombre-personaje" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="login-clave">Clave</label>
-                                <input type="password" id="login-clave" name="clave" required>
-                            </div>
-                            <button type="button" class="btn-login" id="login-btn">Iniciar Sesión</button>
-                        </form>
-                    </div>
-        
-                    <!-- Formulario de Registro -->
-                    <div class="register-form">
-                        <h2>Registrar Cuenta</h2>
-                        <form id="form-registro" action="#" method="post">
-                            <div class="form-group">
-                                <label for="registro-nombre-personaje">Nombre del Personaje</label>
-                                <input type="text" id="registro-nombre-personaje" name="nombre-personaje" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="registro-clave">Clave</label>
-                                <input type="password" id="registro-clave" name="clave" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="registro-repetir-clave">Repetir Clave</label>
-                                <input type="password" id="registro-repetir-clave" name="repetir-clave" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="registro-correo">Correo Electrónico</label>
-                                <input type="email" id="registro-correo" name="correo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="registro-nombre-original">Nombre Original</label>
-                                <input type="text" id="registro-nombre-original" name="nombre-original" required>
-                            </div>
-                            <button type="button" class="btn-registro" id="registro-btn">Registrar</button>
-                        </form>
+        <div class="separador"></div>
+        <main class="main-perfil">
+            
+            <div class="contenedor-perfil">
+                <!-- Columna 1: Imagen del avatar y botón cambiar -->
+                <div class="columna-perfil columna-perfil-izquierda">
+                    <div class="avatar-perfil">
+                        <img src="img/autores/leo.png" alt="Avatar" class="avatar-imagen-perfil">
+                        <button class="btn-cambiar-avatar-perfil">Cambiar Avatar</button>
                     </div>
                 </div>
-            </section>
+        
+                <!-- Columna 2: Formulario de datos personales y usuario -->
+                <div class="columna-perfil columna-perfil-derecha">
+                    <form class="formulario-perfil">
+                        <h2>Datos Personales</h2>
+                        <div class="campo-formulario-perfil">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        
+                        <hr class="separador-perfil">
+        
+                        <h2>Datos de Usuario</h2>
+                        <div class="campo-formulario-perfil">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" required>
+                        </div>
+                        <div class="campo-formulario-perfil">
+                            <label for="clave">Clave:</label>
+                            <input type="password" id="clave" name="clave" required>
+                        </div>
+        
+                        <button type="submit" class="btn-guardar-perfil" id="btn-guardar-perfil">Guardar Cambios</button>
+                    </form>
+                </div>
+            </div>
         </main>
+        
+        
         
         
         
@@ -169,5 +174,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="js/funcionalidad.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 </html>

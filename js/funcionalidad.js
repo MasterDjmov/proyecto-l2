@@ -63,11 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 confirmButtonText: "Si, confirmo poder Editarlo"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire({
-                        title: "Editado Correcto!",
-                        text: "El Objeto ha sido Editado de forma Exitosa.",
-                        icon: "success"
-                    });
+                    window.location.href = 'editar_producto.html';
                 }
             });
         });
@@ -165,7 +161,79 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    /*perfil actualizar*/
+    const actualizarPerfilButton = document.getElementById('btn-guardar-perfil');
+    if(actualizarPerfilButton!=null){
+        actualizarPerfilButton.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Perfil de Usuario',
+                text: '¿Estás seguro que quieres Actualizar la información?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, Actualizar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Actualización del Usuario',
+                        text: 'Tu Perfil fue actualizado',
+                        icon: 'success'
+                    }).then(() => {
+                        document.getElementById('formulario-perfil').submit();
+                    });
+                }
+            });
+        });
+    }
 
+        // Obtener elementos del DOM
+        const modal = document.getElementById("modal-compra");
+        const btnAbrirModal = document.getElementById("btn-proceder-compra");
+        const btnCerrarModal = document.querySelector(".close");
+        const totalPrecioCarrito = document.querySelector(".total-precio").getAttribute("data-total");
+        const totalPrecioModal = document.querySelector(".total-precio-modal");
+        const total = parseFloat(totalPrecioCarrito);
+        // Abrir modal al hacer clic en el botón
+        btnAbrirModal.addEventListener("click", function() {
+            modal.style.display = "block";
+            // Actualizar el precio total en el modal
+            totalPrecioModal.textContent = total;
+        });
+
+        // Cerrar modal al hacer clic en la "x"
+        btnCerrarModal.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        // Cerrar modal si se hace clic fuera de él
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Validar el formulario (puedes agregar más validaciones)
+        document.getElementById("form-compra").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Compra realizada por: " + totalPrecioCarrito);
+            modal.style.display = "none";
+        });
+
+        function actualizarTotal(nuevoTotal) {
+            const totalElemento = document.querySelector(".total-precio");
+            
+            // Actualizar el data-total
+            totalElemento.setAttribute("data-total", nuevoTotal);
+            
+            // Actualizar el contenido visible del span, agregando el formato con $
+            totalElemento.textContent = `$${nuevoTotal.toFixed(2)}`;
+        }
+        
+        // Ejemplo de uso: cambiar el total a 20.99
+        actualizarTotal(total);
+    
 
 
 
